@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  db:
+    image: brid_web/db
+    container_name: db
+    volumes:
+      - ./db/backup/backup.sql:/docker-entrypoint-initdb.d/1-backup.sql
+    ports:
+      - 5432:5432
+
+  server:
+    image: brid_web/server
+    container_name: server
+    ports:
+      - 9876:9876
+
+  frontend:
+    image: brid_web/frontend
+    container_name: frontend
+    ports:
+      - 3000:3000
