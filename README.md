@@ -1,2 +1,2 @@
-# brid-web
+# brid_web
 BRID Systems website
