@@ -33,8 +33,6 @@ server.listen(app.get("port"), async function () {
 			console.log("DATABASE CONNECTION FAILED");
 		}
 
-		apiService.start();
-
 		console.log("Server listening on port " + port + ".");
 	} catch (err) {
 		console.log(err);
